@@ -6,6 +6,7 @@ module.exports = {
     "rules": {
         "react/jsx-filename-extension": [1, {"extensions": [".js"]}],
         "no-extra-semi": "error",
-        "semi": ["error", "never"]
+        "semi": ["error", "never"],
+        "eol-last": ["error", "never"],
     }
-};
+}
