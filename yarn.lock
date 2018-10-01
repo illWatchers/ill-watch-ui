@@ -2,12 +2,10 @@
 # yarn lockfile v1
 
 
-"@illwatchers/eslint-config@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@illwatchers/eslint-config/-/eslint-config-1.0.1.tgz#5dbf45e58f2f47c3861b8a4b493ac30024802510"
-  integrity sha512-+V9Gwymf0tx14TP63nGypCeg5oPznJPNic1Vn9jzgZQFFCXaOtVMDsgOSgbOSpMjnd7JDmo/zLFxwEHf+0X5Hg==
-  dependencies:
-    eslint-config-airbnb "15.1.0"
+"@illwatchers/eslint-config@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@illwatchers/eslint-config/-/eslint-config-1.0.2.tgz#795bc5e23068bb0596266891df0f9675c68bc3b9"
+  integrity sha512-Jy/Djc2/ml8K6ELdqMtVM5zF0JznvDrNZ21mekvJ0PR2YWXPBbtjf8avGEVWz4V76ggpcNYlMAH2oSWrHD3ovg==
 
 "@types/async@2.0.49":
   version "2.0.49"
