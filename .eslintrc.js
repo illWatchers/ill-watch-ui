@@ -1,12 +1,10 @@
 module.exports = {
     "extends": [
         "airbnb",
-        "react-app"
+        "react-app",
+        "@illwatchers"
     ],
     "rules": {
-        "react/jsx-filename-extension": [1, {"extensions": [".js"]}],
-        "no-extra-semi": "error",
-        "semi": ["error", "never"],
-        "eol-last": ["error", "never"],
+        "react/jsx-filename-extension": [1, {"extensions": [".js"]}]
     }
 }
