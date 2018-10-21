@@ -1,21 +1,21 @@
 import React, { Component } from 'react'
+import { Switch, Route } from 'react-router-dom'
 
-import { app, header } from './index.module.css'
+import MainPage from './screens/MainPage/MainPage'
+import Movie from './screens/Movie/Movie'
 
 class App extends Component {
   componentDidMount() {
-    // console.log('to do.. to do.. to do to do to do to do to doooo')
+  // console.log('to do.. to do.. to do to do to do to do to doooo')
   }
 
   render() {
     return (
-      <div className={app}>
-        <header className={header}>
-          <p>
-            ill watch ui based on CRA v.2
-          </p>
-        </header>
-      </div>
+      <Switch>
+        <Route exact path="/" component={MainPage} />
+        <Route path="/movie/:movieId" component={Movie} />
+        {/* <Route path="/watchlist" component={Watchlist} /> */}
+      </Switch>
     )
   }
 }
