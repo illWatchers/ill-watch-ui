@@ -11,6 +11,8 @@
     "react": "16.5.2",
     "react-apollo": "2.2.4",
     "react-dom": "16.5.2",
+    "react-router": "4.3.1",
+    "react-router-dom": "4.3.1",
     "react-scripts": "2.0.4"
   },
   "scripts": {
@@ -21,7 +23,6 @@
   },
   "devDependencies": {
     "@illwatchers/eslint-config": "1.0.2",
-    "babel-eslint": "10.0.1",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-react-app": "3.0.3",
     "eslint-plugin-flowtype": "2.50.3",
@@ -31,7 +32,11 @@
     "husky": "1.1.2",
     "lint-staged": "7.3.0"
   },
-  "eslintIgnore": ["**/node_modules/*", "src/serviceWorker.js", "build/*"],
+  "eslintIgnore": [
+    "**/node_modules/*",
+    "src/serviceWorker.js",
+    "build/*"
+  ],
   "eslintConfig": {
     "extends": [
       "airbnb",
@@ -39,7 +44,14 @@
       "@illwatchers"
     ],
     "rules": {
-      "react/jsx-filename-extension": [1, {"extensions": [".js"]}]
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js"
+          ]
+        }
+      ]
     }
   },
   "browserslist": [
@@ -49,11 +61,13 @@
     "not op_mini all"
   ],
   "husky": {
-    "hooks": {  
+    "hooks": {
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.js": ["eslint"]
+    "*.js": [
+      "eslint"
+    ]
   }
 }
