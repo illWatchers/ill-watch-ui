@@ -2,11 +2,16 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import WatchListQuery from '../../graphql/QueriesHOC/WatchList'
+import MovieById from '../../graphql/QueriesHOC/MovieById'
 import { app, header } from './index.module.css'
 
 const WithWatchList = () => WatchListQuery(data => (
   <span>{data.watchlist}</span>
 ))
+
+const WithMovie = ({ movieByID }) => MovieById(data => (
+  <span>{data && data.movieByID && data.movieByID.original_title}</span>
+), movieByID)
 
 class MainPage extends Component {
   componentDidMount() {
@@ -26,6 +31,7 @@ class MainPage extends Component {
             </Link>
           </p>
           <WithWatchList />
+          <WithMovie movieByID={550} />
         </header>
       </div>
     )
