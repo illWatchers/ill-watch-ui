@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import WatchListQuery from '../../graphql/QueriesHOC/WatchList'
 import { app, header } from './index.module.css'
+
+const WithWatchList = () => WatchListQuery(data => (
+  <span>{data.watchlist}</span>
+))
 
 class MainPage extends Component {
   componentDidMount() {
@@ -20,6 +25,7 @@ class MainPage extends Component {
               Go to random movie
             </Link>
           </p>
+          <WithWatchList />
         </header>
       </div>
     )
