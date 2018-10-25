@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -5,7 +7,7 @@ import WatchListWithData from '../../components/WatchList/WatchList'
 import SmallMovieCardWithData from '../../components/Movie/SmallMovieCard'
 import { app, header } from './index.module.css'
 
-class MainPage extends Component {
+class MainPage extends Component<any> {
   componentDidMount() {
     // console.log('to do.. to do.. to do to do to do to do to doooo')
   }
@@ -23,7 +25,7 @@ class MainPage extends Component {
             </Link>
           </p>
           <WatchListWithData />
-          <SmallMovieCardWithData movieByID={550} fields="original_title" />
+          <SmallMovieCardWithData movieID={550} fields="original_title" />
         </header>
       </div>
     )
