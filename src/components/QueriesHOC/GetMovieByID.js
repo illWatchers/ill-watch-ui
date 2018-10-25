@@ -2,19 +2,17 @@ import React from 'react'
 import { Query } from 'react-apollo'
 import { gql } from 'apollo-boost'
 
-const Container = (Wrapped, movieId) => (
+const GetMovieByID = Wrapped => ({ movieByID, fields }) => (
   <Query
-    query={gql`
-      {
-        movieByID(movieID: ${movieId}) {
-          original_title
-        }
+    query={gql`{
+      movieByID(movieID: ${movieByID}) {
+        ${fields}
       }
-    `}
+    }`}
     errorPolicy="all"
   >
     {({ data }) => (<Wrapped {...data} />)}
   </Query>
 )
 
-export default Container
+export default GetMovieByID

@@ -2,13 +2,9 @@ import React from 'react'
 import { Query } from 'react-apollo'
 import { gql } from 'apollo-boost'
 
-const Container = Wrapped => (
+const Container = Wrapped => () => (
   <Query
-    query={gql`
-      {
-        watchlist
-      }
-    `}
+    query={gql`{ watchlist }`}
     errorPolicy="all"
   >
     {({ data }) => (<Wrapped {...data} />)}
