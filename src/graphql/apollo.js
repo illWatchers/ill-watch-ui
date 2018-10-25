@@ -1,5 +1,5 @@
-import { ApolloClient } from 'apollo-boost'
+import ApolloClient from 'apollo-boost'
 
-const client = new ApolloClient({ uri: 'http://localhost:4000/graphql' })
+const client = new ApolloClient({ uri: 'https://gql.now.sh/' })
 
 export default client

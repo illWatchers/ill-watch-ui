@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import WatchListWithData from '../../components/WatchList/WatchList'
+import SmallMovieCardWithData from '../../components/Movie/SmallMovieCard'
 import { app, header } from './index.module.css'
 
 class MainPage extends Component {
@@ -20,6 +22,8 @@ class MainPage extends Component {
               Go to random movie
             </Link>
           </p>
+          <WatchListWithData />
+          <SmallMovieCardWithData movieByID={550} fields="original_title" />
         </header>
       </div>
     )
