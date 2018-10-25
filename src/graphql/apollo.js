@@ -4,8 +4,9 @@ import {
   from,
   Observable,
   HttpLink,
+  // onError,
+  InMemoryCache,
 } from 'apollo-boost'
-import { InMemoryCache } from 'apollo-cache-inmemory'
 
 import { onError } from 'apollo-link-error'
 
