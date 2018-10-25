@@ -1,9 +1,14 @@
-import { ApolloClient } from 'apollo-boost'
+import {
+  ApolloClient,
+  ApolloLink,
+  from,
+  Observable,
+} from 'apollo-boost'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 
 import { HttpLink } from 'apollo-link-http'
 import { onError } from 'apollo-link-error'
-import { ApolloLink, from, Observable } from 'apollo-link'
+// import { from, Observable } from 'apollo-link'
 
 class AuthLink extends ApolloLink {
   /* eslint-disable-next-line */
