@@ -1,5 +1,5 @@
 import React from 'react'
-import GetMovieID from '../QueriesHOC/GetMovieByID'
+import GetMovieByID from '../QueriesHOC/GetMovieByID'
 
 export const SmallMovieCard = ({ movieByID, watchlist }: any) => (
   <>
@@ -8,5 +8,5 @@ export const SmallMovieCard = ({ movieByID, watchlist }: any) => (
   </>
 )
 
-const SmallMovieCardWithData = GetMovieID(SmallMovieCard)
+const SmallMovieCardWithData = GetMovieByID(SmallMovieCard)
 export default SmallMovieCardWithData
