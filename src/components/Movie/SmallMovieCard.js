@@ -1,7 +1,16 @@
+// @flow
+
 import React from 'react'
 import GetMovieByID from '../QueriesHOC/GetMovieByID'
 
-export const SmallMovieCard = ({ movieByID, watchlist }: any) => (
+export type SmallMovieCardProps = {
+  watchlist: string,
+  movieByID: {
+    original_title: string,
+  }
+}
+
+export const SmallMovieCard = ({ movieByID, watchlist }: SmallMovieCardProps) => (
   <>
     <div>{movieByID && movieByID.original_title}</div>
     <div>{watchlist}</div>
@@ -9,4 +18,5 @@ export const SmallMovieCard = ({ movieByID, watchlist }: any) => (
 )
 
 const SmallMovieCardWithData = GetMovieByID(SmallMovieCard)
+
 export default SmallMovieCardWithData
