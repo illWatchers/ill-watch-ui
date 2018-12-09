@@ -1,0 +1,9 @@
+.searchButton {
+    border-radius: 30px;
+    border-style: none;
+    width: 100px;
+    height: 40px;
+    color: #662020;
+    cursor: pointer;
+    font-weight: bold;
+}

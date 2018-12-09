@@ -1,0 +1,16 @@
+.searchField {
+    width: 500px;
+    border-radius: 30px;
+    height: 40px;
+    caret-color: green;
+    font-size: 15px;
+    font-style: italic;
+    padding-left: 20px;
+    outline: none;
+    border: none;
+}
+
+.searchField:focus {
+    /* border: 1px solid #662020; */
+    box-shadow: #662020;
+}

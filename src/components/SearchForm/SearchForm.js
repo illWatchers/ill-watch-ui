@@ -1,23 +1,23 @@
 import React, { Component } from 'react'
 
-import { app, header } from './index.module.css'
-
-import ClearButton from './ClearButton/ClearButton'
+import { searchForm } from './SearchForm.module.css'
 import SearchButton from './SearchButton/SearchButton'
 import SearchInput from './SearchInput/SearchInput'
 
-class MainPage extends Component {
+class SearchForm extends Component {
   componentDidMount() {
     // console.log('Search mounted')
   }
 
   render() {
     return (
-      <div>
-        Search
-      </div>
+      <form className={searchForm}>
+        <SearchInput />
+        <SearchButton />
+        {/* */}
+      </form>
     )
   }
 }
 
-export default MainPage
+export default SearchForm

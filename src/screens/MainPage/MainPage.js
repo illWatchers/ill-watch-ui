@@ -1,23 +1,16 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-
-import WatchListWithData from '../../components/WatchList/WatchList'
-import SmallMovieCardWithData from '../../components/Movie/SmallMovieCard'
 import {
   app,
-  header,
   mainContainer,
-  movieSearchForm,
-  searchField,
-  searchButton,
 } from './index.module.css'
+import SearchForm from '../../components/SearchForm/SearchForm'
 
 class MainPage extends Component {
   componentDidMount() {
     // console.log('to do.. to do.. to do to do to do to do to doooo')
   }
 
-  onSubmitHandler = (event: any) => {
+  onSubmitHandler = (event) => {
     event.preventDefault()
     const formData = new FormData(event.currentTarget)
     const searchTerm = formData.get('search')
@@ -28,20 +21,7 @@ class MainPage extends Component {
     return (
       <div className={app}>
         <main className={mainContainer}>
-          <form
-            className={movieSearchForm}
-            onSubmit={this.onSubmitHandler}
-          >
-            <input
-              className={searchField}
-              type="search"
-              placeholder="What will you watch next?"
-              name="search"
-            />
-            <button className={searchButton} type="submit">
-              SEARCH
-            </button>
-          </form>
+          <SearchForm />
         </main>
         {/* <header className={header}>
           <p>
