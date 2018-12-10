@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from 'react'
 import {
   app,
@@ -5,7 +7,7 @@ import {
 } from './index.module.css'
 import SearchForm from '../../components/SearchForm/SearchForm'
 
-class MainPage extends Component {
+class MainPage extends Component<any> {
   componentDidMount() {
     // console.log('to do.. to do.. to do to do to do to do to doooo')
   }
