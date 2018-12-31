@@ -1,9 +1,20 @@
+// @flow
+
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 // import {  } from './index.module.css'
 
-class MainPage extends Component<*, *> {
+type Props = {
+  match: {
+    params: {
+      movieId: string
+    }
+  }
+}
+
+
+class MainPage extends Component<Props> {
   componentDidMount() {
     // console.log('Movie mounted')
   }

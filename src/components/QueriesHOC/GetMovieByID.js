@@ -1,11 +1,22 @@
-import React from 'react'
+// @flow
+
+import * as React from 'react'
 import { Query } from 'react-apollo'
 import { gql } from 'apollo-boost'
+import type { SmallMovieCardProps } from '../Movie/SmallMovieCard'
 
-const GetMovieByID = Wrapped => ({ movieByID, fields }) => (
+type Props = {
+  movieID: number,
+  fields: string,
+}
+
+const GetMovieByID = (Wrapped: React.ComponentType<SmallMovieCardProps>) => ({
+  movieID,
+  fields,
+}: Props) => (
   <Query
     query={gql`{
-      movieByID(movieID: ${movieByID}) {
+      movieByID(movieID: ${movieID}) {
         ${fields}
       }
     }`}

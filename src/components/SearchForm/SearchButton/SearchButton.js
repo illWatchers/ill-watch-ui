@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-// import {  } from './index.module.css'
+import { searchButton } from './SearchButton.module.css'
 
-class SearchButton extends Component<*, *> {
+class SearchButton extends Component {
   componentDidMount() {
     // console.log('SearchButton mounted')
   }
@@ -11,9 +11,9 @@ class SearchButton extends Component<*, *> {
     // const {  } = this.props
 
     return (
-      <div>
-        SearchButton
-      </div>
+      <button className={searchButton} type="submit">
+        SEARCH
+      </button>
     )
   }
 }
