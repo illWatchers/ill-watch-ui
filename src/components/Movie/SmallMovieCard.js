@@ -1,10 +1,9 @@
 import React from 'react'
 import GetMovieByID from '../QueriesHOC/GetMovieByID'
 
-export const SmallMovieCard = ({ movieByID, watchlist }: any) => (
+export const SmallMovieCard = ({ movieData }: any) => (
   <>
-    <div>{movieByID && movieByID.original_title}</div>
-    <div>{watchlist}</div>
+    <div>{movieData && movieData.original_title}</div>
   </>
 )
 

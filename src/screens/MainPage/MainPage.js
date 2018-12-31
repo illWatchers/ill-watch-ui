@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
-import WatchListWithData from '../../components/WatchList/WatchList'
-import SmallMovieCardWithData from '../../components/Movie/SmallMovieCard'
+import SearchResultsWithData from '../../components/SearchResults/SearchResults'
 import {
   app,
-  header,
+  // header,
   mainContainer,
   movieSearchForm,
   searchField,
@@ -13,18 +12,21 @@ import {
 } from './index.module.css'
 
 class MainPage extends Component {
-  componentDidMount() {
-    // console.log('to do.. to do.. to do to do to do to do to doooo')
+  state = {
+    searchTerm: '',
   }
 
   onSubmitHandler = (event: any) => {
     event.preventDefault()
     const formData = new FormData(event.currentTarget)
     const searchTerm = formData.get('search')
-    console.log('searchTerm', searchTerm)
+
+    this.setState({ searchTerm })
   }
 
   render() {
+    const { searchTerm } = this.state
+
     return (
       <div className={app}>
         <main className={mainContainer}>
@@ -43,21 +45,9 @@ class MainPage extends Component {
             </button>
           </form>
         </main>
-        {/* <header className={header}>
-          <p>
-            ill watch ui based on CRA v.2
-          </p>
-          <p>
-            <Link to={`/movie/${Math.round(Math.random() * 10)}`}>
-              Go to random movie
-            </Link>
-            <Link to="/graph">
-              To graph
-            </Link>
-          </p>
-          <WatchListWithData />
-          <SmallMovieCardWithData movieByID={550} fields="original_title" />
-        </header> */}
+        {searchTerm
+          && <SearchResultsWithData title={searchTerm} fields="original_title id" />
+        }
       </div>
     )
   }
